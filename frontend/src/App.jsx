@@ -1,20 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import ProtectedRoute from "./routes/ProtectedRoute";
+import ProtectedRoute from "./routes/ProtectedRoutes";
+import { useAuth } from "./contexts/AuthContext";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(null);
+  const { token, loading } = useAuth();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsAuth(!!token);
-  }, []);
-
-  // ⛔ prevents half-second flicker
-  if (isAuth === null) {
+  if (loading) {
     return <div>Loading...</div>;
   }
 
@@ -35,7 +28,7 @@ function App() {
         {/* default route */}
         <Route
           path="*"
-          element={<Navigate to={isAuth ? "/dashboard" : "/login"} />}
+          element={<Navigate to={token ? "/dashboard" : "/login"} />}
         />
       </Routes>
     </BrowserRouter>

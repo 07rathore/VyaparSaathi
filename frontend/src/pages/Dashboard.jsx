@@ -10,9 +10,6 @@ const Dashboard = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    loadDashboard();
-  }, []);
 
   const loadDashboard = async () => {
     try {
