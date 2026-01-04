@@ -1,84 +1,45 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthContext';
-import { LanguageProvider } from './contexts/LanguageContext';
-import Login from './pages/Login';
-import Onboarding from './pages/Onboarding';
-import Dashboard from './pages/Dashboard';
-import Actions from './pages/Actions';
-import Copilot from './pages/Copilot';
-import ComplianceExplained from './pages/ComplianceExplained';
-import History from './pages/History';
-import PrivateRoute from './components/PrivateRoute';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
+  const [isAuth, setIsAuth] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsAuth(!!token);
+  }, []);
+
+  // ⛔ prevents half-second flicker
+  if (isAuth === null) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <LanguageProvider>
-      <AuthProvider>
-        <Router>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route
-              path="/onboarding"
-              element={
-                <PrivateRoute>
-                  <Onboarding />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/dashboard"
-              element={
-                <PrivateRoute>
-                  <Dashboard />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/actions"
-              element={
-                <PrivateRoute>
-                  <Actions />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/copilot"
-              element={
-                <PrivateRoute>
-                  <Copilot />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/compliance"
-              element={
-                <PrivateRoute>
-                  <ComplianceExplained />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/history"
-              element={
-                <PrivateRoute>
-                  <History />
-                </PrivateRoute>
-              }
-            />
-            <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          </Routes>
-        </Router>
-      </AuthProvider>
-    </LanguageProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* default route */}
+        <Route
+          path="*"
+          element={<Navigate to={isAuth ? "/dashboard" : "/login"} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
