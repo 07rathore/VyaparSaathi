@@ -1,0 +1,169 @@
+{
+  "app": {
+    "name": "VyaparSaathi",
+    "tagline": "Your fear-free compliance assistant"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save & Continue",
+    "submit": "Save & Continue",
+    "next": "Next",
+    "back": "Back",
+    "complete": "Complete",
+    "logout": "Logout",
+    "cancel": "Cancel",
+    "close": "Close",
+    "done": "Done",
+    "pending": "Pending",
+    "overdue": "Overdue",
+    "dueToday": "Due Today",
+    "notApplicable": "Not Applicable",
+    "markAsDone": "Mark as Done",
+    "viewAll": "View All",
+    "send": "Send",
+    "pleaseWait": "Please wait...",
+    "explainSimply": "Explain Simply",
+    "hideExplanation": "Hide Simple Explanation",
+    "showExplanation": "Show Simple Explanation"
+  },
+  "navbar": {
+    "dashboard": "Dashboard",
+    "todaysActions": "Today's Actions",
+    "compliance": "Your Current Status",
+    "aiCopilot": "AI Copilot",
+    "history": "History"
+  },
+  "login": {
+    "title": "VyaparSaathi",
+    "subtitle": "Your fear-free compliance assistant",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register",
+    "alreadyHaveAccount": "Already have an account? Login",
+    "dontHaveAccount": "Don't have an account? Register",
+    "emailPlaceholder": "your@email.com",
+    "passwordPlaceholder": "••••••••"
+  },
+  "onboarding": {
+    "step": "Step",
+    "of": "of",
+    "step1": {
+      "title": "What type of work do you do?",
+      "freelancer": "Freelancer / Consultant",
+      "shopOwner": "Shop Owner / Retailer",
+      "gigWorker": "Gig Worker (Delivery, Driver, etc.)",
+      "smallBusiness": "Small Business Owner"
+    },
+    "step2": {
+      "title": "What's your approximate monthly income?",
+      "lessThan10k": "Less than ₹10,000",
+      "10kTo50k": "₹10,000 - ₹50,000",
+      "50kTo1L": "₹50,000 - ₹1,00,000",
+      "1LTo5L": "₹1,00,000 - ₹5,00,000",
+      "moreThan5L": "More than ₹5,00,000"
+    },
+    "step3": {
+      "title": "Are you GST registered?",
+      "description": "Don't worry if you're not sure. We'll help you figure this out later.",
+      "yes": "Yes, I am GST registered",
+      "no": "No, I'm not GST registered"
+    },
+    "step4": {
+      "title": "Which state are you located in?",
+      "selectState": "Select your state"
+    },
+    "step5": {
+      "title": "What city are you in? (Optional)",
+      "placeholder": "Enter your city",
+      "description": "This helps us provide location-specific compliance information."
+    },
+    "saving": "Saving..."
+  },
+  "dashboard": {
+    "title": "Your Compliance Dashboard",
+    "subtitle": "Here's how you're doing today",
+    "confidenceScore": "Your Compliance Confidence Score",
+    "statusMessage": "Status",
+    "totalCompliances": "Total Compliances",
+    "completed": "Completed",
+    "pendingActions": "Things You Need to Do",
+    "riskLevel": "Risk Level",
+    "lowRisk": "You're in good shape! Keep it up.",
+    "mediumRisk": "A few actions need your attention. No worries, we can help!",
+    "highRisk": "Let's get you back on track. We're here to help!",
+    "risk": "Risk",
+    "nextDeadline": "Next Upcoming Deadline",
+    "dueIn": "Due in",
+    "days": "day",
+    "daysPlural": "days",
+    "viewAllActions": "View All Actions",
+    "todaysActions": "Today's Actions",
+    "todaysActionsDesc": "See what you need to do today",
+    "askCopilot": "Ask AI Copilot",
+    "askCopilotDesc": "Get answers to your compliance questions",
+    "loading": "Loading your dashboard...",
+    "safe": "Safe",
+    "attentionNeeded": "Attention needed",
+    "highRiskLabel": "High risk"
+  },
+  "actions": {
+    "title": "Today's Actions",
+    "subtitle": "Here's what you need to do to stay compliant",
+    "pending": "Pending",
+    "completed": "Completed",
+    "notApplicable": "Not Applicable",
+    "dueDate": "Due date",
+    "frequency": "Frequency",
+    "penalty": "Penalty",
+    "noDeadline": "No deadline",
+    "dueToday": "Due today",
+    "overdue": "overdue",
+    "noActions": "No actions found. You're all set! 🎉",
+    "loading": "Loading actions..."
+  },
+  "copilot": {
+    "title": "AI Compliance Copilot",
+    "subtitle": "Ask me anything about compliance. I'm here to help, not judge! 😊",
+    "placeholder": "Ask me anything about compliance...",
+    "suggestedQuestions": "Suggested questions:",
+    "question1": "Am I safe this month?",
+    "question2": "What happens if I miss filing?",
+    "question3": "Explain GST simply",
+    "question4": "What compliances apply to me?",
+    "question5": "How do I stay compliant?",
+    "greeting": "Hi! I'm VyaparSaathi, your friendly compliance assistant. Ask me anything about compliance, taxes, or what you need to do. I'm here to help! 😊",
+    "error": "I'm sorry, I'm having trouble right now. Please try again in a moment."
+  },
+  "compliance": {
+    "title": "Compliance Explained",
+    "subtitle": "Simple explanations of what applies to you and what you need to do",
+    "frequency": "Frequency:",
+    "deadline": "Deadline:",
+    "penalty": "Penalty:",
+    "explainedInSimpleTerms": "Explained in Simple Terms:",
+    "loadingExplanation": "Loading explanation...",
+    "noCompliances": "No compliances found. Complete onboarding to see what applies to you.",
+    "loading": "Loading compliances..."
+  },
+  "history": {
+    "title": "Compliance History",
+    "subtitle": "Your track record of staying compliant",
+    "greatJob": "Great job staying compliant! 🎉",
+    "creditMessage": "Regular compliance improves your credit eligibility and makes it easier to get loans, business credit, and financial services. Keep up the good work!",
+    "completedFilings": "Completed Filings",
+    "completedOn": "Completed on:",
+    "dueDate": "Due date:",
+    "noHistory": "No completed filings yet. Complete your first compliance action to see it here!",
+    "totalCompleted": "Total Completed",
+    "onTime": "On Time",
+    "complianceRate": "Compliance Rate",
+    "loading": "Loading history..."
+  },
+  "penalty": {
+    "mayApply": "A small fee may apply if this is missed"
+  }
+}
+
+
+
